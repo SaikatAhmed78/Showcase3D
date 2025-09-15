@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { navLinks } from "../constants";
 
-const NavItems = ({ onclick = () => {} }) => (
+const NavItems = ({ onClick = () => {} }) => (
   <ul className="nav-ul">
     {navLinks.map((item) => (
       <li key={item.id} className="nav-li">
-        <a href={item.href} className="nav-li_a" onclick={onclick}>
+        <a href={item.href} className="nav-li_a" onClick={onClick}>
           {item.name}
         </a>
       </li>
@@ -27,7 +27,7 @@ const Navbar = () => {
             href="/"
             className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
           >
-            Saikat Ahmed
+            Ahmed
           </a>
 
           <button
@@ -50,7 +50,7 @@ const Navbar = () => {
 
       <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
         <nav className="p-5">
-          <NavItems onclick={closeMenu} />
+          <NavItems onClick={closeMenu} />
         </nav>
       </div>
     </header>
