@@ -20,6 +20,24 @@ const Hero = () => {
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
+  // // Leva Controls for HackerRoom
+  // const { scale, position, rotation } = useControls("HackerRoom", {
+  //   scale: {
+  //     value: sizes.deskScale,
+  //     min: 0.01,
+  //     max: 5,
+  //     step: 0.01,
+  //   },
+  //   position: {
+  //     value: sizes.deskPosition,
+  //     step: 0.1,
+  //   },
+  //   rotation: {
+  //     value: [0.1, -Math.PI, 0],
+  //     step: 0.1,
+  //   },
+  // });
+
   return (
     <section id="home" className="min-h-screen w-full flex flex-col relative">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
@@ -32,17 +50,18 @@ const Hero = () => {
 
       {/* Hero Three Js Start */}
       <div className="w-full h-full absolute inset-0">
-        <Leva hidden />
+        {/* Leva panel visible */}
+        <Leva hidden/>
 
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+            <PerspectiveCamera makeDefault position={[0, 0, 50]} />
 
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
-                scale={sizes.deskScale}
-                position={sizes.deskPosition}
-                rotation={[0.1, -Math.PI, 0]}
+                scale={0.004}
+                position={[0, -4, 0]}
+                rotation={[-Math.PI / 2, 0, 0]}
               />
             </HeroCamera>
 

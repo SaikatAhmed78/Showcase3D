@@ -2,87 +2,77 @@ import Globe from "react-globe.gl";
 import Button from "../Components/Button";
 import { useState } from "react";
 
-const  About = () => {
-  const [hasCopied, setHasCopied] = useState(false);
+const About = () => {
+  const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(" shaikatahmed78@gmail.com");
-    setHasCopied(true);
+  const copyEmail = () => {
+    navigator.clipboard.writeText("shaikatahmed78@gmail.com");
+    setCopied(true);
 
     setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
+      setCopied(false);
+    }, 1800); 
   };
 
   return (
-    <section className="c-space my-20" id="about">
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+    <section id="about" className="c-space my-24">
+      
+      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-6">
+
+        {/* Intro */}
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img
-              className="w-full sm:h-[276px] h-fit object-contain"
+              className="w-full sm:h-[276px] object-contain"
               src="assets/grid1.png"
-              alt=""
+              alt="developer-intro"
             />
-
             <div>
-              <p className="grid-headtext">Hi, I’m Saikat Ahmed</p>
+              <p className="grid-headtext">Hey, I’m Saikat Ahmed</p>
               <p className="grid-subtext">
-                {" "}
-                I’m a passionate web developer building interactive and
-                efficient applications.
+                Crafting digital experiences that are functional and engaging.
+                Building software feels like shaping ideas into reality.
               </p>
             </div>
           </div>
         </div>
 
+        {/* Tech Stack */}
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img
               src="assets/gridcopy.png"
-              alt="grid-image-2"
-              className="w-full sm:h-[276px] h-fit object-contain"
+              alt="tech-stack"
+              className="w-full sm:h-[276px] object-contain"
             />
-
             <div>
-              <p className="grid-headtext">Tech Stack</p>
+              <p className="grid-headtext">Tech Toolbox</p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools
-                that allow me to build robust and scalable applications
+                From JavaScript to modern frameworks, my toolkit evolves with
+                every project, ensuring scalable and efficient solutions.
               </p>
             </div>
           </div>
         </div>
 
-        {/* <div>
-          <img src="assets/gridcopy.png" alt="" />
-          <p className="grid-headtext">Tech Stack</p>
-          <p className="grid-subtext">
-            I specialize in a variety of languages, frameworks, and tools that
-            allow me to build robust and scalable applications
-          </p>
-        </div> */}
-
+        {/* Globe */}
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
-            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
+            <div className="rounded-3xl w-full sm:h-[326px] flex justify-center items-center">
               <Globe
                 height={326}
                 width={326}
                 backgroundColor="rgba(0,0,0,0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                umpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                showAtmosphere={true}
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                 labelsData={[
                   {
                     lat: 23.685,
                     lng: 90.3563,
-                    text: "Saikat, Bangladesh",
-                    color: "#FFD700",
-                    size: 20,
-                    maxDistance: 200,
+                    text: "Saikat Ahmed",
+                    color: "#00FFAE",
+                    size: 18,
                   },
                 ]}
               />
@@ -90,50 +80,48 @@ const  About = () => {
 
             <div>
               <p className="grid-headtext">
-                I’m very flexible with time zone communications & locations
+                Comfortable across time zones & cultures
               </p>
               <p className="grid-subtext">
-                I’m based in Dhaka, Bangladesh and open to remote work
-                worldwide.
+                I work from Bangladesh but love collaborating worldwide.
               </p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <Button name="Let’s Talk" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
 
+        {/* Passion */}
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
             <img
               src="assets/grid3.png"
-              alt="grid-3"
-              className="w-full sm:h-[266px] h-fit object-contain"
+              alt="coding-passion"
+              className="w-full sm:h-[266px] object-contain"
             />
-
             <div>
-              <p className="grid-headtext">My Passion for Coding</p>
+              <p className="grid-headtext">Why I Code</p>
               <p className="grid-subtext">
-                I love solving problems and building things through code.
-                Programming isn&apos;t just my profession—it&apos;s my passion.
-                I enjoy exploring new technologies, and enhancing my skills.
+                Coding to me is problem-solving with creativity. It’s more than
+                a career—it’s a playground where ideas come alive.
               </p>
             </div>
           </div>
         </div>
 
+        {/* Contact */}
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img
               src="assets/grid4.png"
-              alt="grid-4"
-              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+              alt="contact-grid"
+              className="w-full md:h-[126px] sm:h-[276px] object-cover sm:object-top"
             />
-
             <div className="space-y-2">
-              <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container" onClick={handleCopy}>
+              <p className="grid-subtext text-center">Reach Out</p>
+              <div className="copy-container" onClick={copyEmail}>
                 <img
-                  src={hasCopied ? "assets/tick.svg" : "assets/copy.svg"}
-                  alt="copy"
+                  src={copied ? "assets/tick.svg" : "assets/copy.svg"}
+                  alt="copy-icon"
                 />
                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">
                   shaikatahmed78@gmail.com
