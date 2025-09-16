@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import HackerRoom from "../Components/HackerRoom";
 import { Suspense } from "react";
 import CanvasLoader from "../Components/CanvasLoader";
-import { Leva } from "leva"
+import { Leva } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import Target from "../Components/Target";
@@ -12,7 +12,6 @@ import Rings from "../Components/Rings";
 import Cube from "../Components/Cube";
 import HeroCamera from "../Components/HeroCamera";
 import Button from "../Components/Button";
-
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -31,7 +30,7 @@ const Hero = () => {
         <p className="hero_tag text-gray_gradient">Building Products & Brand</p>
       </div>
 
-      {/* Three Js Start */}
+      {/* Hero Three Js Start */}
       <div className="w-full h-full absolute inset-0">
         <Leva hidden />
 
@@ -59,6 +58,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
       </div>
+      {/* Hero Three Js End */}
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
         <a href="#about" className="w-fit">
