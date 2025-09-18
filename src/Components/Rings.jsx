@@ -17,10 +17,6 @@ const Rings = ({ position }) => {
     () => {
       if (refList.current.length === 0) return;
 
-      refList.current.forEach((r) => {
-        r.position.set(position[0], position[1], position[2]);
-      });
-
       gsap
         .timeline({
           repeat: -1,
@@ -32,23 +28,19 @@ const Rings = ({ position }) => {
             y: `+=${Math.PI * 2}`,
             x: `-=${Math.PI * 2}`,
             duration: 2.5,
-            stagger: {
-              each: 0.15,
-            },
+            stagger: { each: 0.15 },
           }
         );
     },
-    {
-      dependencies: position,
-    }
+    { dependencies: [] }
   );
 
   return (
     <Center>
-      <group scale={0.5}>
+      <group scale={0.39} position={position}>
         {Array.from({ length: 4 }, (_, index) => (
           <mesh key={index} ref={getRef}>
-            <torusGeometry args={[(index + 1) * 0.5, 0.1]}></torusGeometry>
+            <torusGeometry args={[(index + 1) * 0.5, 0.1]} />
             <meshMatcapMaterial matcap={texture} toneMapped={false} />
           </mesh>
         ))}

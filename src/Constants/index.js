@@ -24,37 +24,38 @@ export const navLinks = [
 export const clientReviews = [
   {
     id: 1,
-    name: "Emily Johnson",
-    position: "Marketing Director at GreenLeaf",
+    name: "Anika Chowdhury",
+    position: "Creative Lead at Lumen Studio",
     img: "assets/review1.png",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Saikat turned our scattered ideas into a polished digital product. The website feels effortless to use, and the design truly represents our brand identity. He is incredibly detail-oriented and professional.",
   },
   {
     id: 2,
-    name: "Mark Rogers",
-    position: "Founder of TechGear Shop",
+    name: "Mateo Alvarez",
+    position: "Founder of AeroNext Robotics",
     img: "assets/review2.png",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
+      "What impressed me most was Saikat Ahmed ability to balance design with functionality. Our platform not only looks beautiful but also performs flawlessly under heavy traffic. He’s been a game-changer for our business.",
   },
   {
     id: 3,
-    name: "John Dohsas",
-    position: "Project Manager at UrbanTech ",
+    name: "Farhan Qureshi",
+    position: "Product Manager at Zenith Healthcare",
     img: "assets/review3.png",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "Saikat handled our complex requirements with ease. From integrations to UI polish, every piece of the project felt carefully considered. The end result is a system our team actually enjoys working with every day.",
   },
   {
     id: 4,
-    name: "Ether Smith",
-    position: "CEO of BrightStar Enterprises",
+    name: "Elena Petrov",
+    position: "CEO of Aurora Media Group",
     img: "assets/review4.png",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
+      "Working with Ahmed was inspiring. He not only delivered a high-performing site but also guided us with strategies that helped our content reach a wider audience. A rare mix of technical and creative brilliance.",
   },
 ];
+
 
 export const myProjects = [
   {
@@ -213,7 +214,7 @@ export const myProjects = [
     desc: "Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.",
     subdesc:
       "Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-    href: "https://educonnect-7c172.web.app",
+    href: "https://educonnect-7c172.web.app/",
     texture: "/textures/project/project5.mp4",
     logo: "/assets/project-logo5.png",
     logoStyle: {
@@ -257,7 +258,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
       ? [5, -5, 0]
       : isTablet
       ? [5, -5, 0]
-      : [9, -5.5, 0],
+      : [9, -7, 0],
     reactLogoPosition: isSmall
       ? [3, 4, 0]
       : isMobile
@@ -271,14 +272,14 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
       ? [-10, 10, 0]
       : isTablet
       ? [-12, 10, 0]
-      : [-45, 10, 0],
+      : [-35, 13, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
       ? [-9, -10, -10]
       : isTablet
       ? [-11, -7, -10]
-      : [-13, -13, -10],
+      : [-13, -10, -10],
   };
 };
 

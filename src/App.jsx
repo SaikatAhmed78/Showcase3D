@@ -1,4 +1,5 @@
 import About from "./Sections/About";
+import Clients from "./Sections/Clients";
 import Hero from "./Sections/Hero";
 import Navbar from "./Sections/Navbar";
 import Projects from "./Sections/Projects";
@@ -10,6 +11,7 @@ const App = () => {
       <Hero/>
       <About/>
       <Projects/>
+      <Clients/>
     </main>
   );
 };

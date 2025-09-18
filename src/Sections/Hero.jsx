@@ -50,7 +50,7 @@ const Hero = () => {
 
       {/* Hero Three Js Start */}
       <div className="w-full h-full absolute inset-0">
-        {/* Leva panel visible */}
+        {/* Leva panel visible false */}
         <Leva hidden/>
 
         <Canvas className="w-full h-full">
