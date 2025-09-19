@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
+    "emailjs": "^4.0.3",
     "eslint-plugin-react": "^7.37.5",
     "leva": "^0.10.0",
     "maath": "^0.10.8",
