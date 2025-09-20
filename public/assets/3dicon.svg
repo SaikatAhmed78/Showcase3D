@@ -1,0 +1,61 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"></stop>
+      <stop offset="1" stop-color="#071330"></stop>
+    </linearGradient>
+
+    <linearGradient id="topFace" x1="0" x2="1">
+      <stop offset="0" stop-color="#6EE7B7"></stop>
+      <stop offset="1" stop-color="#34D399"></stop>
+    </linearGradient>
+
+    <linearGradient id="leftFace" x1="0" x2="1">
+      <stop offset="0" stop-color="#60A5FA"></stop>
+      <stop offset="1" stop-color="#3B82F6"></stop>
+    </linearGradient>
+
+    <linearGradient id="rightFace" x1="0" x2="1">
+      <stop offset="0" stop-color="#FBBF24"></stop>
+      <stop offset="1" stop-color="#FB923C"></stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"></feGaussianBlur>
+      <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background circle -->
+  <rect x="0" y="0" width="128" height="128" rx="28" fill="url(#bgGrad)"></rect>
+
+  <!-- subtle outer ring -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"></circle>
+
+  <!-- orbit ring (rotated ellipse) -->
+  <g transform="translate(64,64) rotate(-20)">
+    <ellipse rx="40" ry="16" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 6"></ellipse>
+    <!-- moving dot on orbit -->
+    <circle cx="40" cy="0" r="3.2" fill="#A78BFA"></circle>
+  </g>
+
+  <!-- isometric cube group (centered) -->
+  <g transform="translate(0,0)">
+    <!-- top face -->
+    <polygon points="64,30 92,44 64,58 36,44" fill="url(#topFace)" stroke="rgba(0,0,0,0.12)" stroke-width="1"></polygon>
+    <!-- left face -->
+    <polygon points="36,44 64,58 64,96 36,82" fill="url(#leftFace)" stroke="rgba(0,0,0,0.12)" stroke-width="1"></polygon>
+    <!-- right face -->
+    <polygon points="92,44 64,58 64,96 92,82" fill="url(#rightFace)" stroke="rgba(0,0,0,0.12)" stroke-width="1"></polygon>
+    <!-- small inner highlight on top -->
+    <polygon points="64,36 84,46 64,56 44,46" fill="rgba(255,255,255,0.08)"></polygon>
+    <!-- subtle shadow under cube -->
+    <ellipse cx="64" cy="102" rx="28" ry="6" fill="rgba(0,0,0,0.35)" filter="url(#softGlow)"></ellipse>
+  </g>
+
+  <!-- subtle S-monogram carved into front face (stylized) -->
+  <path d="M54 66c0-6 10-6 10-12s-10-6-10-12" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,0)"></path>
+  <path d="M74 66c0 6-10 6-10 12s10 6 10 12" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,0)"></path>
+
+</svg>

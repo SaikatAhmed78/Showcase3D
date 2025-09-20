@@ -16,9 +16,7 @@ const About = () => {
 
   return (
     <section id="about" className="c-space my-24">
-      
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-6">
-
         {/* Intro */}
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
@@ -85,7 +83,17 @@ const About = () => {
               <p className="grid-subtext">
                 I work from Bangladesh but love collaborating worldwide.
               </p>
-              <Button name="Let’s Talk" isBeam containerClass="w-full mt-10" />
+
+              <a
+                href="https://www.linkedin.com/in/saikat-ahmed2/"
+                className="w-fit"
+              >
+                <Button
+                  name="Let’s Talk"
+                  isBeam
+                  containerClass="w-full mt-10"
+                />
+              </a>
             </div>
           </div>
         </div>
