@@ -84,10 +84,7 @@ const About = () => {
                 I work from Bangladesh but love collaborating worldwide.
               </p>
 
-              <a
-                href="https://www.linkedin.com/in/saikat-ahmed2/"
-                className="w-fit"
-              >
+              <a href="#contact" className="w-fit">
                 <Button
                   name="Let’s Talk"
                   isBeam

@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-4 px-6">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-1">
             <img src="/assets/parsonal-logo.png" alt="logo" className="w-10 h-10" />
             <span className="text-white font-bold text-xl tracking-wide">
               Ahmed

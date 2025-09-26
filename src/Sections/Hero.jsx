@@ -51,7 +51,7 @@ const Hero = () => {
       {/* Hero Three Js Start */}
       <div className="w-full h-full absolute inset-0">
         {/* Leva panel visible false */}
-        <Leva hidden/>
+        <Leva hidden />
 
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
@@ -80,9 +80,12 @@ const Hero = () => {
       {/* Hero Three Js End */}
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
+        <a
+          href="https://drive.google.com/file/d/1EV1I1OJDaC9zPNqeCAdGUvla_5IsmzQ_/view?usp=sharing"
+          className="w-fit"
+        >
           <Button
-            name="Let's work together"
+            name="Download My Resume"
             isBeam
             containerClass="sm:w-fit w-full sm:min-w-96"
           />
